@@ -4,7 +4,7 @@ var url_ob = new URL(document.URL);
 document.getElementById("save").addEventListener("click", saveSeq);
 
 const rows = 5;
-      notes = ['a3', 'g3', 'e3', 'd3', 'c3'];
+      notes = ['A3', 'G3', 'E3', 'D3', 'C3'];
 let index = 0,
     seqLength = 16;
     seqSteps = new Array ();
@@ -74,6 +74,7 @@ const synths = [
 const sampler = new Tone.Sampler({
 	urls: {
     C3: "niamh1.mp3",
+    D3: "niamh2.mp3",
 
 	},
 	baseUrl: "/sounds/",
