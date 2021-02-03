@@ -75,13 +75,23 @@ const sampler = new Tone.Sampler({
 	urls: {
     C3: "niamh1.mp3",
     D3: "niamh2.mp3",
+    E3: "niamh3.mp3",
+    G3: "niamh4.mp3",
 
 	},
 	baseUrl: "/sounds/",
 // 	onload: () => {
 //     // hideLoadScreen();
 //   }
-}).toDestination();
+})
+
+const reverb = new Tone.Reverb({
+      decay: 10,
+      predelay: 2,
+      wet: 2
+    }).toDestination();
+
+    sampler.connect(reverb);
 
 synths[0].oscillator.type = 'triangle';
 synths[1].oscillator.type = 'sine';
