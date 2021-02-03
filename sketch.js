@@ -86,9 +86,7 @@ const sampler = new Tone.Sampler({
 })
 
 const reverb = new Tone.Reverb({
-      decay: 10,
-      predelay: 2,
-      wet: 2
+      
     }).toDestination();
 
     sampler.connect(reverb);
